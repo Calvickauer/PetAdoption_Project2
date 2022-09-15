@@ -6,7 +6,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
-
+const axios = require('axios');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 console.log('yooooooooooo..... >>> ',SECRET_SESSION);
@@ -55,6 +55,7 @@ const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
   console.log(`🎧 You're listening to the smooth sounds of port ${PORT} 🎧`);
 });
+
 
 module.exports = server;
 
