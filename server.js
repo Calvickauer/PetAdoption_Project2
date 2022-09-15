@@ -9,7 +9,8 @@ const isLoggedIn = require('./middleware/isLoggedIn');
 const axios = require('axios');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
-console.log('yooooooooooo..... >>> ',SECRET_SESSION);
+const API_KEY = process.env.API_KEY;
+console.log('yooooooooooo..... >>> ',SECRET_SESSION, "api key: ",API_KEY);
 
 
 app.set('view engine', 'ejs');
@@ -20,6 +21,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(layouts);
 
 app.use(session({
+  api: API_KEY,// do i want to put my API KEY IN HERE  ?  ?  ?  ?
   secret: SECRET_SESSION,    // What we actually will be giving the user on our site as a session cookie
   resave: false,             // Save the session even if it's modified, make this false
   saveUninitialized: true    // If we have a new session, we save it, therefore making that true
