@@ -105,4 +105,4 @@ async function createAnimalTest(){
     }
 }
 
-createAnimalTest();
+// createAnimalTest();

@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    <header>
+      <img src="/Pics/Document.jpeg" alt="Adoption">
+    </header>
 
     <%- include('partials/alerts') %>
 
     <% if (!currentUser) {%>
         <li><a href="/auth/signup">Signup</a></li>
         <li><a href="/auth/login">Login</a></li>
+        <li><a href="/">Home</a></li>
      <% } else { %>
         <li><a href="/auth/logout">Logout</a></li>
         <li><a href="/profile">Profile</a></li>
+        <li><a href="/">Home</a></li>
     <% } %>
 
     <%- body %> 
