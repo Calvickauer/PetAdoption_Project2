@@ -1,11 +1,11 @@
 {
   "development": {
-    "database": "express_auth_dev",
+    "database": "PetAdoption",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "express_auth_test",
+    "database": "PetAdoption_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

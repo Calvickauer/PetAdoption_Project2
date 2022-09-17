@@ -87,3 +87,22 @@ async function deleteUser() {
     }
 }
 // @todo run deleteUser function below
+
+
+async function createAnimalTest(){
+    try {
+        const newPet = await db.pet.create({
+            name:"Olive",
+            type:"dog",
+            breed:"pug",
+            sex:'Female',
+            age: 100,
+            locationId: 10
+        })
+        console.log(newPet);
+    } catch (error){
+        console.log('There was an error creating test Pet');
+    }
+}
+
+createAnimalTest();
