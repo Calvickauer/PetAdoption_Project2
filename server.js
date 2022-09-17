@@ -1,12 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const layouts = require('express-ejs-layouts');
+const router = express.Router();
 const app = express();
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const axios = require('axios');
+const { urlencoded } = require('express');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const API_KEY = process.env.API_KEY;
@@ -21,7 +23,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(layouts);
 
 app.use(session({
-  api: API_KEY,// do i want to put my API KEY IN HERE  ?  ?  ?  ?
   secret: SECRET_SESSION,    // What we actually will be giving the user on our site as a session cookie
   resave: false,             // Save the session even if it's modified, make this false
   saveUninitialized: true    // If we have a new session, we save it, therefore making that true
@@ -43,6 +44,28 @@ app.get('/', (req, res) => {
   res.render('index'); 
 });
 
+app.post('/results', (req, res) => {
+  const params = new URLSearchParams();
+  params.append('grant_type', "client_credentials");
+  params.append('client_id', process.env.API_KEY);
+  params.append('client_secret', SECRET_SESSION);
+  axios.post("https://api.petfinder.com/v2/oauth2/token", params).then(response => {
+    axios.get(`https://api.petfinder.com/v2/animals?zipcode=${req.body.Zipcode}`, {
+      headers: {
+        "Authorization": `Bearer ${response.data.access_token}`
+      }
+    })
+    .then( answer => {
+      console.log(answer);
+      res.render('results', { animals: answer.data.animals})
+    })
+    console.log(response.data);
+  })
+  .catch(err => {
+    console.log(err)
+  })
+})
+
 // Add this above /auth controllers
 app.get('/profile', isLoggedIn, (req, res) => {
   const { id, name, email } = req.user.get(); 
@@ -51,7 +74,6 @@ app.get('/profile', isLoggedIn, (req, res) => {
 
 // access to all of our auth routes  GET /auth/login  GET /auth/signup POST routes as well
 app.use('/auth', require('./controllers/auth'));
-
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {

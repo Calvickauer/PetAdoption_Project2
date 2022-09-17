@@ -2,7 +2,7 @@
 
 
 <div class="container">
-    <form id="pet-form">
+    <form method="POST" action="./results" id="pet-form">
       <div class="form-group">
         <select id="animal">Animal
         <option value="cat">Cat</option>
@@ -11,9 +11,11 @@
         <option value="pig">Pig</option>
         <option value="bird">Bird</option>
       </select>
-      <input type="text" id="zip" class="form-control form-control-lg"
+      <input type="text" id="zip" class="form-control form-control-lg mt-2" name="Zipcode"
       placeholder="Enter Your Zipcode">
-      <input type="submit" value="Find Available Pets!" class="btn btn-dark btn-lg btn-block mt-3">
+      <input type="submit" value="Find Available Pets!" class="btn btn-danger btn-lg btn-block mt-3">
       </div>
     </form>
+    <div id="results"></div>
   </div>
+

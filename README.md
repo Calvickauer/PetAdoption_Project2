@@ -23,6 +23,12 @@ Express authentication template using Passport + Flash messages + custom middlew
 | createdAt | Date | Auto-generated |
 | updatedAt | Date | Auto-generated |
 
+'/v2/oauth2/token?grant_type=client_credentials&client_id=veprSzG70WBWfFP1nHZO1UGoaf2kQ5mP6rZJJDK3xi9whQgByh&client_secret=lVG5SCqvPInxXiIOo8sM2Qrek2VoacUAXXkMUTDm'
+
+'api.petfinder.com'
+
+
+
 ### Default Routes
 
 | Method | Path | Location | Purpose |
