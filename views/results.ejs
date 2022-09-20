@@ -1,9 +1,44 @@
+<h1>Results</h1>
+<% if (!currentUser) {%>
+
 <% let each = 1; %> 
 <% animals.forEach(animal => { %>
     <h2><%= each %> </h2>
-    <p> id: <%= animal.id %> </p>
+    <p>Description: <%= animal.description %> </p>
     <p> Name: <%= animal.name %> </p>
-<p>Age: <%= animal.age %> </p>
+    <p>Animal Type: <%= animal.type %> </p>
+    <p>Status: <%= animal.status %> </p>
+    <p>Postal code <%= animal.contact.address.postcode %> </p>
+    <p>state: <%= animal.contact.address.state %> </p>
 <% each++ %> 
 <% }) %> 
-<h1>Results</h1>
+<% } else { %>
+    <% let each = 1; %> 
+    <% animals.forEach(animal => { %>
+        <h2><%= each %> </h2>
+        <div class="card card-body mb-3">
+            <p> id# <%= animal.id %> </p>
+            <p>Organization Id# <%= animal.organization_id %> </p>
+            <p>Description: <%= animal.description %> </p>
+            <p> Name: <%= animal.name %> </p>
+        <p>Animal Type: <%= animal.type %> </p>
+    <p>Age: <%= animal.age %> </p>
+    <p>Status: <%= animal.status %> </p>
+    <h4>Contact info</h4>
+    <p><%= animal.contact.email %> </p>
+    <p><%= animal.contact.phone %> </p>
+    <p><%= animal.contact.address[0] %> </p>
+    <p>Postal code <%= animal.contact.address.postcode %> </p>
+    <p>state: <%= animal.contact.address.state %> </p>
+    <h4><a href="./animal.ejs">Click for more..</a></h4>
+    <!-- <img src=<%= animal.photos[0] %> alt=""> -->
+    <% each++ %> 
+        </div>
+    <% }) %> 
+<% } %>
+
+<h1>End Results</h1>
+<div class="">
+    <img src="assets/images/Tyson.png" id="TysonIMG" class="img-fluid" alt=""> 
+</div>
+<h1>End Results</h1>

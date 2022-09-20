@@ -13,3 +13,8 @@ body {
   background-color: lightgrey;
   text-align: center;
 }
+
+img {
+  width: 50%;
+  height: 50%;
+}
