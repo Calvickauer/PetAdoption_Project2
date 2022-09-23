@@ -18,3 +18,25 @@ img {
   width: 50%;
   height: 50%;
 }
+
+.index-container{
+  /* background-color: darkgrey;
+  border:5px solid black; */
+  max-width: 400px;
+
+}
+
+#images{
+  border:5px solid black;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#SmallImages{
+  border:5px solid black;
+  max-width: 300px;
+  max-height: 500px;
+}
+#SmallImagesDiv{
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+<h1>Welcome to <%= animal.name %>'s Profile Page! </h1>
+<div class="card">
+<% if(animal.photos.length > 0 && animal.primary_photo_cropped !== null){ %>
+    <div class="mx-auto">
+        <img src=<%= animal.primary_photo_cropped.small %> alt="petImg" id="images" class="card-img-top justify-content-center m-3">
+    </div>
+    <% } %>
+<div class="card-body>
+    <div class="card-header">
+        <h5 class="card-title"><%= animal.name %> </h5>
+        <p class="text-secondary">Organization Id# <%= animal.organization_id %> </p>
+        <p class="text-secondary" name="animalID"> Pet id# <%= animal.id %> </p>
+        <p class="text-secondary"> <%= animal.contact.address.state %>, <%= animal.contact.address.postcode %> </p>
+        <p>Status: <%= animal.status %> </p>
+        <p>Animal Type: <%= animal.type %> </p>
+        <p>Age: <%= animal.age %> </p>
+        <p>Description: <%= animal.description %> </p>
+        <h4>Contact info</h4>
+ <p><%= animal.contact.email %> </p>
+ <p><%= animal.contact.phone %> </p>
+ <p><%= animal.contact.address[0] %> </p>
+</div>
+</div>
+
+    

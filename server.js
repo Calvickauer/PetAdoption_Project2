@@ -7,8 +7,6 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
-const axios = require('axios');
-const { urlencoded } = require('express');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const API_KEY = process.env.API_KEY;
@@ -43,28 +41,10 @@ app.get('/', (req, res) => {
   res.render('index'); 
 });
 
-app.post('/results', (req, res) => {
-  const params = new URLSearchParams();// whats this do
-  params.append('grant_type', "client_credentials");
-  params.append('client_id', process.env.API_KEY);
-  params.append('client_secret', SECRET_SESSION);
-  axios.post("https://api.petfinder.com/v2/oauth2/token", params).then(response => {
-    console.log(req.body.animal);
-    axios.get(`https://api.petfinder.com/v2/animals?type=${req.body.animal}&location=${req.body.Zipcode}`, {  // `https://api.petfinder.com/v2/organizations?location=${req.body.Zipcode}
-      headers: {
-        "Authorization": `Bearer ${response.data.access_token}`
-      }
-    })
-    .then( answer => {
-      console.log("this is my answer", answer.data.animals);
-      res.render('results', {animals: answer.data.animals})
-    })
-    console.log(response.data);
-  })
-  .catch(err => {
-    console.log(err)
-  })
-})
+app.get('/animal', (req, res) => {
+  res.render('animal'); 
+});
+
 
 // Add this above /auth controllers
 app.get('/profile', isLoggedIn, (req, res) => {
@@ -74,7 +54,7 @@ app.get('/profile', isLoggedIn, (req, res) => {
 
 // access to all of our auth routes  GET /auth/login  GET /auth/signup POST routes as well
 app.use('/auth', require('./controllers/auth'));
-app.use('/results', require('./controllers/search'));
+app.use('/search', require('./controllers/search'));
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
