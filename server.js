@@ -7,6 +7,8 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
+var methodOverride = require('method-override');
+const db = require('./models');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const API_KEY = process.env.API_KEY;
@@ -18,6 +20,7 @@ app.set('view engine', 'ejs');
 app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
+app.use(methodOverride('_method'));
 app.use(layouts);
 
 app.use(session({
@@ -39,6 +42,34 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
   res.render('index'); 
+});
+
+app.get('/profile/edit', isLoggedIn, (req, res) => {
+  res.render('edit');
+})
+
+app.put('/profile/:id', isLoggedIn, async (req, res) => {
+  try {
+    const usersUpdated = await db.user.update({
+      email: req.body.email,
+      name: req.body.name
+    }, {
+      where: {
+        id: req.params.id
+      }
+    });
+    console.log('TTTTTTTTTTTTTTTTTT put it in TTTTTTTTTTTTTTTTTTT');
+    console.log(usersUpdated, "users updated");
+    console.log('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW');
+  
+    // redirect back to profile page
+    res.redirect('/profile');
+
+  } catch (error) {
+    console.log(error, "  MY PUT ERROR!!!")
+    console.log('***************************************************************');
+    res.render('edit');
+  }
 });
 
 
