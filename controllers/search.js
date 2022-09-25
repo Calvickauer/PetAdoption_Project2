@@ -108,7 +108,6 @@ router.post('/favorite', async (req, res) => {
   const newFavoritePet = await db.favorite.create({
     petId: parseInt(req.body.petID),
     userId: parseInt(req.body.userID),
-    name: (req.body.petName)
   });
   console.log(newFavoritePet.toJSON());
   // redirection time

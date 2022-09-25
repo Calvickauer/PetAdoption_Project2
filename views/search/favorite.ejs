@@ -1,5 +1,4 @@
-<h1>Welcome to your favorite pets page!</h1>
-
+<h1>Favorite pets page!</h1>
 
 <% let count = 1; %>
 <% Favorites.forEach(Fav => { %>
@@ -8,7 +7,7 @@
     <h2><%= Fav.petId %> </h2>
     <h2><%= Fav.name %> </h2>
     <% count = count + 1; %> 
-    <form method="POST" action="./animal" id="animalId" class="m-2">
-        <button name="FavId" type="submit" class=" btn btn-primary" value=<%=Fav.petId%>>More info</button>
+    <form method="POST" action="./animal" id="animalId" class="m-2">    
+        <button name="animalId" type="submit" class=" btn btn-primary" value=<%=Fav.petId%>>More info</button>
     </form>
 <% }}) %> 
