@@ -67,6 +67,7 @@
         <form action="/search/favorite" method="post" id="favorite">
             <input type="text" value="<%= animal.id %>" name="petID"  hidden>
             <input type="text" value="<%= currentUser.id %>" name="userID"  hidden>
+            <input type="text" value="<%= animal.name %>" name="petName" hidden>
             <button type="submit" class="m-2">Add to Favorites</button>
         </form>
     </div>

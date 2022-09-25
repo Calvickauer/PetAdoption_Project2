@@ -41,6 +41,12 @@ router.post('/results', (req, res) => {
   })
 });
 
+router.delete('/favorite/:FavId', (req, res) => {
+  const FavoriteID = parseInt(req.params.FavId);
+  favorite.destroy(FavoriteID);
+  console.log('Destroyed')
+});
+
 
 router.post('/animal', (req, res) => {
   const params = new URLSearchParams();
@@ -102,10 +108,12 @@ router.post('/favorite', async (req, res) => {
   const newFavoritePet = await db.favorite.create({
     petId: parseInt(req.body.petID),
     userId: parseInt(req.body.userID),
+    name: (req.body.petName)
   });
   console.log(newFavoritePet.toJSON());
   // redirection time
   res.redirect('/search');
+  console.log("************************************** ",req.body," **************************************");
 });
 
 
