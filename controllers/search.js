@@ -6,6 +6,16 @@ const router = express.Router();
 const axios = require('axios');
 const passport = require('../config/ppConfig');
 const db = require('../models');
+
+
+router.get('/', async (req, res) => {
+  let Favorites = await db.favorite.findAll();
+  Favorites = Favorites.map(F => F.toJSON());
+  console.log(Favorites);
+  res.render('search/favorite', {Favorites: Favorites});
+})
+
+
   
 
 router.post('/results', (req, res) => {
@@ -57,5 +67,46 @@ router.post('/animal', (req, res) => {
       console.log(err);
     })
   })
+
+
+router.post('/contact', (req, res) => {
+  const params = new URLSearchParams();
+  params.append('grant_type', "client_credentials");
+  params.append('client_id', API_KEY);
+  params.append('client_secret', SECRET_SESSION);
+  axios.post("https://api.petfinder.com/v2/oauth2/token", params).then(response => {
+    if(response.status !== 200)throw new Error()
+    axios.get(`https://api.petfinder.com/v2/animals/${req.body.animalId}`,{
+      headers: {
+        "Authorization": `Bearer ${response.data.access_token}`
+      }
+    })
+    .then(animalResponse => {
+      console.log(animalResponse)
+      if(animalResponse.status !== 200)throw new Error()
+      res.render('search/contact', {animal: animalResponse.data.animal});
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(400).render('404');
+    })
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  })
+
+router.post('/favorite', async (req, res) => {
+  console.log("Favorite Favorite Favorite Favorite Favorite Favorite. . . . - - - - ",req.body);
+  //create new favorite in db
+  const newFavoritePet = await db.favorite.create({
+    petId: parseInt(req.body.petID),
+    userId: parseInt(req.body.userID),
+  });
+  console.log(newFavoritePet.toJSON());
+  // redirection time
+  res.redirect('/search');
+});
+
 
   module.exports = router;

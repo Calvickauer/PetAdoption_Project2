@@ -58,10 +58,16 @@
                         <% console.log('no photos'); %> 
                   <% } %>
             </div>
-            
+
             <div class="container">
-        <form method="POST" action="./animal" id="animalId">
+        <form method="POST" action="./animal" id="animalId" class="m-2">
+            
             <button name="animalId" type="submit" class=" btn btn-primary" value=<%=animal.id%>>More info on <%= animal.name %> </button>
+        </form>
+        <form action="/search/favorite" method="post" id="favorite">
+            <input type="text" value="<%= animal.id %>" name="petID"  hidden>
+            <input type="text" value="<%= currentUser.id %>" name="userID"  hidden>
+            <button type="submit" class="m-2">Add to Favorites</button>
         </form>
     </div>
 </div>

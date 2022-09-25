@@ -1,5 +1,5 @@
 <h1>Welcome to <%= animal.name %>'s Profile Page! </h1>
-<div class="card">
+<div class="card m-3">
 <% if(animal.photos.length > 0 && animal.primary_photo_cropped !== null){ %>
     <div class="mx-auto">
         <img src=<%= animal.primary_photo_cropped.small %> alt="petImg" id="images" class="card-img-top justify-content-center m-3">
@@ -21,23 +21,12 @@
  <p><%= animal.contact.address[0] %> </p>
 </div>
 </div>
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <h4> Send the shelter an inquiry about <%= animal.name %>! </h4>
-            <div class="col-4">
-                <form>
-               <input class="m-1" type="text" name="" id="" placeholder=" Your Name">
-               <input class="m-1" type="text" placeholder=" Your Email">
-               <input class="m-1" value=<%=animal.name%>>
-               <input class="m-1" value=<%=animal.id%>>
-             <textarea name="yourMessageToShelter" id="contact" cols="20" rows="4" class="m-1"></textarea>
-            </div>
-        </div>
-               <button type="submit" class="m-2 btn-primary">Contact</button>
-               
-            </form>
-      </div>
+    <div>
+        <form method="POST" action="./contact" id="animalId">
+            <button name="animalId" type="submit" class=" btn btn-primary m-3" value=<%=animal.id%>>Contact shelter about <%= animal.name %> </button>
+        </form>
+
+    </div>
 
 
 

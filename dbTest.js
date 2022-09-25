@@ -1,4 +1,5 @@
 const db = require('./models');
+const pet = require('./models/pet');
 
 // Implement CRUD for user model
 
@@ -106,3 +107,49 @@ async function createAnimalTest(){
 }
 
 // createAnimalTest();
+
+async function createCommentTest(){
+    try {
+        const newComment = await db.comment.create({
+            petId: 10111,
+            userId: 1010101,
+            title: "this is the Test title",
+            comment: "this is the test comment"
+        })
+        console.log(newComment);
+    } catch (error){
+        console.log('there was an error creating test comment');
+    }
+}
+
+// createCommentTest();
+
+// this one doesnt work yet
+// async function createTestFavorite(){
+//     try {
+//         const newFav = await db.favorite.create({
+//             petId: 100000,
+//             userId: 222222,
+//             commentId:40000
+//         })
+//         console.log(newFav);
+//     } catch (error){
+//         console.log(error,' There was an error creating favorite test');
+//     }
+// }
+
+// createTestFavorite();
+
+
+async function Pet(){
+    try {
+        const newPet = await db.pet.create({
+        name: "barry"
+        })
+        console.log(newPet);
+    } catch (error){
+        console.log('there was an error creating test pet');
+    }
+}
+
+Pet();

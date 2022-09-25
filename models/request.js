@@ -3,22 +3,24 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class favorite extends Model {
+  class request extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      models.request.hasMany(models.pet);
+      models.request.belongsTo(models.user);
       // define association here
     }
   }
-  favorite.init({
+  request.init({
     userId: DataTypes.INTEGER,
     petId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'favorite',
+    modelName: 'request',
   });
-  return favorite;
+  return request;
 };

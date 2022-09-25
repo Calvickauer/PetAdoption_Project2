@@ -41,9 +41,7 @@ app.get('/', (req, res) => {
   res.render('index'); 
 });
 
-app.get('/animal', (req, res) => {
-  res.render('animal'); 
-});
+
 
 
 // Add this above /auth controllers
