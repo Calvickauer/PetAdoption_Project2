@@ -1,34 +1,63 @@
 
 
-<div class="container">
-    <div class="row justify-content-center">
-        <h4> Send the shelter an inquiry about <%= animal.name %>! </h4>
-        <div class="col-4">
-            <form action="https://formsubmit.co/Calvickauer@Gmail.com" method="POST" >
-           <input name="name" class="m-1" type="text"id="" placeholder=" Your Name">
-           <input name="email"  class="m-1" type="text" placeholder=" Your Email" id="Email">
-           <input name="subject"  class="m-1" value=<%=animal.name%> hidden>
-         <textarea name="text" id="contact" cols="20" rows="4" class="m-1"></textarea>
+<section class="Contact">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-body contact-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="head text-center text-white py-3">
+                                    <h3>Contact Shelter About <%= animal.name %>!</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form p-3">
+                            <div class="row justify-content-center">
+                                <div class="col-4">
+                                    <form action="https://formsubmit.co/Calvickauer@Gmail.com" method="POST" >
+                                   <input name="name" class=" effect-1 m-1" type="text"id="" placeholder=" Your Name">
+                                   <span class="Focus-border"></span>
+                                   <input name="email"  class=" effect-1 m-1" type="text" placeholder=" Your Email" id="Email">
+                                   <span class="Focus-border"></span>
+                                </div>
+                                <div class="row">
+                                    <input name="subject"  class="m-1" value=<%=animal.name%> hidden>
+                                  <textarea name="text" id="contact" cols="20" rows="4" class=" effect-1 m-1" placeholder="Your Message Here..."></textarea>
+                                  <span class="Focus-border"></span>
+                                </div>
+                            </div>
+                                   <button type="submit" class="mt-4 btn1">Send inquiry</button>
+                                   
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-           <button type="submit" class="m-2 btn-primary">Contact</button>
-           
-        </form>
-  </div>
+</section>
 
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail(){
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "petfindersubmit@gmail.com",
-            Password : "Lunchlady123",
-            To : "calvickauer@gmail.com",
-            From : document.getElementById("Email").value,
-            Subject : "Pet Inquiry",
-            Body : "This is the body of the Inquiry"
-        }).then(
-            message => alert(message)
-        );
-    }
-  </script>
+
+
+
+
+  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "petfindersubmit@gmail.com",
+                Password : "Lunchlady123",
+                To : "calvickauer@gmail.com",
+                From : document.getElementById("Email").value,
+                Subject : "Pet Inquiry",
+                Body : "This is the body of the Inquiry"
+            }).then(
+                message => alert(message)
+                );
+            }
+        </script> -->
+        <div class="container">
+          </div>

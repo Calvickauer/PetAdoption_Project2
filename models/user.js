@@ -12,6 +12,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      models.user.hasMany(models.request);
+      models.user.hasMany(models.favorite);
       // define association here
     }
   };
