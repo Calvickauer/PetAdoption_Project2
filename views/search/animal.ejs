@@ -1,4 +1,4 @@
-<h1>Welcome to <%= animal.name %>'s Profile Page! </h1>
+<h1>Welcome to <%= animal.name %>'s Profile! </h1>
 <div class="card m-3">
 <% if(animal.photos.length > 0 && animal.primary_photo_cropped !== null){ %>
     <div class="mx-auto">
@@ -19,14 +19,14 @@
  <p><%= animal.contact.email %> </p>
  <p><%= animal.contact.phone %> </p>
  <p><%= animal.contact.address[0] %> </p>
+ <div>
+     <form method="POST" action="./contact" id="animalId">
+         <button name="animalId" type="submit" class=" btn btn-primary m-3" value=<%=animal.id%>>Contact shelter about <%= animal.name %> </button>
+     </form>
+ 
+ </div>
 </div>
 </div>
-    <div>
-        <form method="POST" action="./contact" id="animalId">
-            <button name="animalId" type="submit" class=" btn btn-primary m-3" value=<%=animal.id%>>Contact shelter about <%= animal.name %> </button>
-        </form>
-
-    </div>
 
 
 
