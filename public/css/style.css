@@ -209,3 +209,15 @@ img {
   -moz-box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.75);
   box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.75);
 }
+
+.adopt-img {
+  -webkit-box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.75);
+}
+
+.no-img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 20px;
+}
