@@ -6,6 +6,7 @@ const router = express.Router();
 const axios = require('axios');
 const passport = require('../config/ppConfig');
 const db = require('../models');
+const isLoggedIn = require('../middleware/isLoggedIn');
 
 
 router.get('/', async (req, res) => {
@@ -37,14 +38,19 @@ router.post('/results', (req, res) => {
     console.log(response.data);
   })
   .catch(err => {
-    console.log(err)
+    res.render('404')
+    console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",err,"**********************************************")
   })
 });
 
-router.delete('/favorite/:FavId', (req, res) => {
-  const FavoriteID = parseInt(req.params.FavId);
-  favorite.destroy(FavoriteID);
-  console.log('Destroyed')
+router.delete('/favorite/:FavId', isLoggedIn, async (req, res) => {
+  try {
+   const deletedFav = await db.favorite.delete(req.params.FavId)
+    console.log('Destroyed')
+  } catch (error) {
+    console.log(error);
+    res.render("./404");
+  }
 });
 
 
