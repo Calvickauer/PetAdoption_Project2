@@ -3,11 +3,14 @@
 <% let count = 1; %>
 <% Favorites.forEach(Fav => { %>
     <% if (Fav.userId == currentUser.id){ %> 
-    <%= count; %>  
-    <h2><%= Fav.petId %> </h2>
+        <h2><%= Fav.petId %> </h2>
+        <%= count; %>  
     <h2><%= Fav.name %> </h2>
     <% count = count + 1; %> 
     <form method="POST" action="./animal" id="animalId" class="m-2">    
         <button name="animalId" type="submit" class=" btn btn-primary" value=<%=Fav.petId%>>More info</button>
+    </form>
+    <form action="" method="post">
+        <button type="submit" value=<%= Fav.petId %> class="btn btn-danger">Remove</button>
     </form>
 <% }}) %> 
