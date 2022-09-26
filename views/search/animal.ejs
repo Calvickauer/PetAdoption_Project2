@@ -23,6 +23,7 @@
                 <p><%= animal.contact.phone %> </p>
                 <p><%= animal.contact.address[0] %> </p>
                 <form method="POST" action="./contact" id="animalId">
+                    <input value=<%=animal.contact.email %> type="text" hidden>
                     <button name="animalId" type="submit" class=" btn btn-primary m-3" value=<%=animal.id%>>Contact shelter about <%= animal.name %> </button>
                 </form>
         </div>
