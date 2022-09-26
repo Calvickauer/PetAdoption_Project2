@@ -40,35 +40,35 @@
             <% let each = 1; %> 
             <% animals.forEach(animal => { %>
                 <div class="text-align card-columns-fluid mt-3">
-                <div class="card card-body mb-3 col-sm-6">
-                    <div class="row">
-                    <div class="card-header">
-                        <h5 class="card-title"> Name: <%= animal.name %> </h5>
-                    </div>
-                    <div class="">
+                    <div class="card card-body mb-3 col-sm-6 results-body">
+                        <div class="row">
+                            <div class="card-header results-card-header">
+                                <h5 class="card-title"> Name: <%= animal.name %> </h5>
+                            </div>
+                            <div>
+                        <ul class="list-group">
+                            <li class="list-group-item">Status: <%= animal.status %> </li>
+                        </ul>
                     <p class="text-secondary">Animal Type: <%= animal.type %> </p>
                     <p class="text-secondary"> <%= animal.contact.address.state %>, <%= animal.contact.address.postcode %></p>
-                    <ul class="list-group">
-                        <li class="list-group-item">Status: <%= animal.status %> </li>
-                    </ul>
-                    </div>
-                    <div id="SmallImagesDiv">
-                        <% if(animal.photos.length > 0 && animal.primary_photo_cropped !== null){ %>
-                            <img src=<%= animal.primary_photo_cropped.small %> alt="petImg" id="SmallImages" class="rounded-circle img-fluid mb-3 mt-2">
-                            <% } else { %>
-                                <% console.log('no photos'); %> 
-                          <% } %>
-                    </div>
-        
+                </div>
+
+                <div id="SmallImagesDiv">
+                    <% if(animal.photos.length > 0 && animal.primary_photo_cropped !== null){ %>
+                        <img src=<%= animal.primary_photo_cropped.small %> alt="petImg" id="SmallImages" class="rounded-circle img-fluid mb-3 mt-2">
+                        <% } else { %>
+                            <% console.log('no photos'); %> 
+                            <% } %>
+                        </div>
                     <div class="container">
                 <form method="POST" action="./animal" id="animalId" class="m-2">
                     
-                    <button name="animalId" type="submit" class=" btn btn-primary" value=<%=animal.id%>>More info on <%= animal.name %> </button>
+                    <button name="animalId" type="submit" class=" btn btn3" value=<%=animal.id%>>More info on <%= animal.name %> </button>
                 </form>
                 <form action="/search/favorite" method="post" id="favorite">
                     <input type="text" value="<%= animal.id %>" name="petID"  hidden>
                     <input type="text" value="<%= currentUser.id %>" name="userID"  hidden>
-                    <button type="submit" class="m-2">Add to Favorites</button>
+                    <button type="submit" class=" btn btn1 m-2">Add to Favorites</button>
                 </form>
             </div>
         </div>

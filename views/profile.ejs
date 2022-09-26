@@ -1,9 +1,18 @@
-<h2>Logged In</h2>
 
-<h3><%= name %>'s profile page </h3>
-<a class="btn btn-warning m-3 border-danger" href="profile/edit">Edit profile</a>
-<a class="btn m-3 border-dark btn-success" href="search">Favorites</a>
+<div class="card-column-fluid mt-5">
+    <div class="card col-lg-2">
+        <div class="card-header profile-text">
+            <h2 class="profile-text">Logged into</h2>
+            <h3 class="profile-text"><%= name %>'s profile </h3>
+        </div>
+        <div class="card-body profile-body">
+            <p>Name: <%= name %></p>
+            <p>Email Address: <%= email %></p>
+            <p>Id: <%= id %></p>
+            <a class="btn m-3 btn5" href="profile/edit">Edit profile</a>
+            <a class="btn m-3 btn4" href="search">Favorites</a>
+        </div>
+    </div>
+</div>
 
-<p>Name: <%= name %></p>
-<p>Email Address: <%= email %></p>
-<p>Id: <%= id %></p>
+
