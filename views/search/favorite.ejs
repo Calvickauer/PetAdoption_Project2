@@ -10,9 +10,6 @@
                     <%= count; %>  
                 <h2><%= Fav.name %> </h2>
                 <% count = count + 1; %> 
-                <!-- <form method="POST" action="./animal" id="animalId" class="m-2">    
-                    <button name="animalId" type="submit" class=" btn btn-primary" value=<%=Fav.petId%>>More info</button>
-                </form> -->
                 <form method="POST" action="/search/animal" id="animalId" class=" animalId m-2">
                     <button name="animalId" type="submit" class=" btn btn3" value=<%=Fav.petId%>>More info</button>
                 </form>
