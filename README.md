@@ -1,4 +1,13 @@
-# `Express Authentication`
+# 'Pet Adoption Application'
+```text
+Welcome to Pet Adoption a place where you can change your life by adopting an animal in need!
+```
+
+
+
+
+
+## Express Authentication
 
 Express authentication template using Passport + Flash messages + custom middleware
 
@@ -22,11 +31,6 @@ Express authentication template using Passport + Flash messages + custom middlew
 | password | String | Stored as a hash |
 | createdAt | Date | Auto-generated |
 | updatedAt | Date | Auto-generated |
-
-'/v2/oauth2/token?grant_type=client_credentials&client_id=veprSzG70WBWfFP1nHZO1UGoaf2kQ5mP6rZJJDK3xi9whQgByh&client_secret=lVG5SCqvPInxXiIOo8sM2Qrek2VoacUAXXkMUTDm'
-
-'api.petfinder.com'
-
 
 
 ### Default Routes
