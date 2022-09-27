@@ -43,7 +43,7 @@
                     <div class="card card-body mb-3 col-sm-4 results-body">
                         <div class="row">
                             <div class="card-header results-card-header">
-                                <h5 class="card-title"> Name: <%= animal.name %> </h5>
+                                <h3 class="card-title"> Name: <%= animal.name %> </h3>
                             </div>
                             <div>
                         <ul class="list-group">
@@ -61,11 +61,11 @@
                             <% console.log('no photos'); %> 
                             <% } %>
                         </div>
-                    <div class="container">
+                    <d nb iv class="container">
                 <form method="POST" action="./animal" id="animalId" class="m-2">
-                    
                     <button name="animalId" type="submit" class=" btn btn3" value=<%=animal.id%>>More info on <%= animal.name %> </button>
                 </form>
+
                 <form action="/search/favorite" method="post" id="favorite">
                     <input type="text" value="<%= animal.id %>" name="petID"  hidden>
                     <input type="text" value="<%= currentUser.id %>" name="userID"  hidden>

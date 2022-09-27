@@ -44,17 +44,17 @@ router.post('/results', (req, res) => {
 });
 
 router.delete('/favorite/:FavId', isLoggedIn, async (req, res) => {
-  try {
-   const deletedFav = await db.favorite.delete(req.params.FavId)
+  db.favorite.destroy({
+    where: {petId: req.params.FavId}
+  }).then(deleted => {
     console.log('Destroyed')
-  } catch (error) {
-    console.log(error);
-    res.render("./404");
-  }
+    console.log(deleted);
+  });
 });
 
 
 router.post('/animal', (req, res) => {
+  console.log(req.body);
   const params = new URLSearchParams();
   params.append('grant_type', "client_credentials");
   params.append('client_id', API_KEY);

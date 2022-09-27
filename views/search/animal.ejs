@@ -1,10 +1,10 @@
 <h1>Welcome to <%= animal.name %>'s Profile! </h1>
 
 <div class="text-align card-columns-fluid mt-3">
-    <div class="card card-body mb-3 col-sm-3">
+    <div class="card card-body mb-3 col-sm-4 animal-card">
         <div class="row">
-            <div class="card-header">
-                <h5 class="card-title"><%= animal.name %> </h5>
+            <div class="card-header animal-card-header">
+                <h3 class="card-title"><%= animal.name %> </h3>
                 <% if(animal.photos.length > 0 && animal.primary_photo_cropped !== null){ %>
                     <div class="mx-auto">
                         <img src=<%= animal.primary_photo_cropped.small %> alt="petImg" id="images" class="card-img-top justify-content-center m-3">

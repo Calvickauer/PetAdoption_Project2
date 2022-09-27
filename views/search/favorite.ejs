@@ -3,14 +3,25 @@
 <% let count = 1; %>
 <% Favorites.forEach(Fav => { %>
     <% if (Fav.userId == currentUser.id){ %> 
-        <h2><%= Fav.petId %> </h2>
-        <%= count; %>  
-    <h2><%= Fav.name %> </h2>
-    <% count = count + 1; %> 
-    <form method="POST" action="/favorite/" id="animalId" class="m-2">    
-        <button name="animalId" type="submit" class=" btn btn-primary" value=<%=Fav.petId%>>More info</button>
-    </form>
-    <form action="" method="post">
-        <button type="submit" value=<%= Fav.petId %> class="btn btn-danger">Remove</button>
-    </form>
+<div class="card-column-fluid col-sm-2 mx-auto">
+    <div class="card">
+        <div class="card-body fav-card-body">
+                    <h2><%= Fav.petId %> </h2>
+                    <%= count; %>  
+                <h2><%= Fav.name %> </h2>
+                <% count = count + 1; %> 
+                <!-- <form method="POST" action="./animal" id="animalId" class="m-2">    
+                    <button name="animalId" type="submit" class=" btn btn-primary" value=<%=Fav.petId%>>More info</button>
+                </form> -->
+                <form method="POST" action="/search/animal" id="animalId" class=" animalId m-2">
+                    <button name="animalId" type="submit" class=" btn btn3" value=<%=Fav.petId%>>More info</button>
+                </form>
+
+                <form action="/search/favorite/<%=Fav.petId%>?_method=DELETE" method="post">
+                    <button type="submit" value="DELETE" class="btn btn-danger">Remove</button>
+                </form>
+        </div>
+    </div>
+</div>
+
 <% }}) %> 

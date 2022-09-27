@@ -183,7 +183,11 @@ img {
 }
 
 .results-body {
-  background-color:rgb(40, 40, 40);
+  background-color:rgb(207, 207, 207);
+}
+
+.fav-card-body{
+  background-color: tan;
 }
 
 .results-card-header{
@@ -220,4 +224,12 @@ img {
   max-width: 200px;
   max-height: 200px;
   border-radius: 20px;
+}
+
+.animal-card {
+  background-color: rgb(207, 207, 207);
+}
+
+.animal-card-header{
+  background-color: rgb(0, 129, 26, 0.7);
 }
