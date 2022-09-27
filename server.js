@@ -84,6 +84,9 @@ app.get('/profile', isLoggedIn, (req, res) => {
 // access to all of our auth routes  GET /auth/login  GET /auth/signup POST routes as well
 app.use('/auth', require('./controllers/auth'));
 app.use('/search', require('./controllers/search'));
+app.use((req, res) => {
+  res.status(404).render('main/404');
+})
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {

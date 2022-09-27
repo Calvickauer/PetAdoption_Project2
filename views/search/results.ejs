@@ -1,6 +1,7 @@
 <img src="/assets/images/adoptions33.png" id="MainIMG" class="img-fluid" alt=""> 
-
-<h1>Results</h1>
+<div class="results-title">
+    <h1>Results</h1>
+</div>
 
 <% if (!currentUser) {%>
 
@@ -63,13 +64,13 @@
                         </div>
                     <d nb iv class="container">
                 <form method="POST" action="./animal" id="animalId" class="m-2">
-                    <button name="animalId" type="submit" class=" btn btn3" value=<%=animal.id%>>More info on <%= animal.name %> </button>
+                    <button name="animalId" type="submit" class="btn3" value=<%=animal.id%>>More info on <%= animal.name %> </button>
                 </form>
 
                 <form action="/search/favorite" method="post" id="favorite">
                     <input type="text" value="<%= animal.id %>" name="petID"  hidden>
                     <input type="text" value="<%= currentUser.id %>" name="userID"  hidden>
-                    <button type="submit" class=" btn btn1 m-2">Add to Favorites</button>
+                    <button type="submit" class="btn1 m-2">Add to Favorites</button>
                 </form>
             </div>
         </div>
