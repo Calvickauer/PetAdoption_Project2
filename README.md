@@ -10,6 +10,7 @@ heroku  https://git.heroku.com/local-adoptions.git (push)
 origin  https://github.com/Calvickauer/PetAdoption_Project2.git (fetch)
 origin  https://github.com/Calvickauer/PetAdoption_Project2.git (push)
 
+<img width="1167" alt="Screen Shot 2022-09-26 at 8 40 57 PM" src="https://user-images.githubusercontent.com/106926062/192703343-77a4370f-1c6b-4f58-8b5d-cdb1d646a06b.png">
 <img width="678" alt="Screen Shot 2022-09-26 at 8 41 31 PM" src="https://user-images.githubusercontent.com/106926062/192663384-7421f043-7280-4b9e-80da-b2eff6d915f1.png">
 <img width="678" alt="Screen Shot 2022-09-26 at 8 42 03 PM" src="https://user-images.githubusercontent.com/106926062/192663385-414ef52b-a34b-43a3-8199-150953258bf1.png">
 <img width="678" alt="Screen Shot 2022-09-26 at 8 42 26 PM" src="https://user-images.githubusercontent.com/106926062/192663387-bb973375-d299-4903-8f23-9928ef7a7f4b.png">
