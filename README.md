@@ -4,6 +4,19 @@ Welcome to Pet Adoption a place where you can change your life and the life of a
 ```
 
 
+https://local-adoptions.herokuapp.com/
+heroku  https://git.heroku.com/local-adoptions.git (fetch)
+heroku  https://git.heroku.com/local-adoptions.git (push)
+origin  https://github.com/Calvickauer/PetAdoption_Project2.git (fetch)
+origin  https://github.com/Calvickauer/PetAdoption_Project2.git (push)
+
+<img width="678" alt="Screen Shot 2022-09-26 at 8 41 31 PM" src="https://user-images.githubusercontent.com/106926062/192663384-7421f043-7280-4b9e-80da-b2eff6d915f1.png">
+<img width="678" alt="Screen Shot 2022-09-26 at 8 42 03 PM" src="https://user-images.githubusercontent.com/106926062/192663385-414ef52b-a34b-43a3-8199-150953258bf1.png">
+<img width="678" alt="Screen Shot 2022-09-26 at 8 42 26 PM" src="https://user-images.githubusercontent.com/106926062/192663387-bb973375-d299-4903-8f23-9928ef7a7f4b.png">
+<img width="678" alt="Screen Shot 2022-09-26 at 8 42 51 PM" src="https://user-images.githubusercontent.com/106926062/192663389-a254772b-c7b4-4177-bc30-a2f12cb9618d.png">
+<img width="1217" alt="Screen Shot 2022-09-26 at 8 43 22 PM" src="https://user-images.githubusercontent.com/106926062/192663392-9aa5b029-3f06-4a82-89bd-fb03383c4c54.png">
+
+
 
 
 
