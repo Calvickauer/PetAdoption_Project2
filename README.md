@@ -16,7 +16,8 @@ origin  https://github.com/Calvickauer/PetAdoption_Project2.git (push)
 <img width="678" alt="Screen Shot 2022-09-26 at 8 42 26 PM" src="https://user-images.githubusercontent.com/106926062/192663387-bb973375-d299-4903-8f23-9928ef7a7f4b.png">
 <img width="678" alt="Screen Shot 2022-09-26 at 8 42 51 PM" src="https://user-images.githubusercontent.com/106926062/192663389-a254772b-c7b4-4177-bc30-a2f12cb9618d.png">
 <img width="1217" alt="Screen Shot 2022-09-26 at 8 43 22 PM" src="https://user-images.githubusercontent.com/106926062/192663392-9aa5b029-3f06-4a82-89bd-fb03383c4c54.png">
-
+![models](https://user-images.githubusercontent.com/106926062/192704803-ace6bb04-45b3-4c58-97b0-09a1ec598aad.png)
+![WireFrame](https://user-images.githubusercontent.com/106926062/192704840-1f038ba0-9d12-41fc-b01c-28a385c42845.png)
 
 
 
