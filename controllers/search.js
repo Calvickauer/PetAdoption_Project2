@@ -35,6 +35,10 @@ router.post('/results', (req, res) => {
       console.log("this is my answer", answer.data.animals);
       res.render('search/results', {animals: answer.data.animals})
     })
+    .catch(err =>{
+    console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",err,"**********************************************")
+
+    })
     console.log(response.data);
   })
   .catch(err => {
