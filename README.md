@@ -1,6 +1,6 @@
 # 'Pet Adoption Application'
 ```text
-Welcome to Pet Adoption a place where you can change your life by adopting an animal in need!
+Welcome to Pet Adoption a place where you can change your life and the life of an animal in need!
 ```
 
 
