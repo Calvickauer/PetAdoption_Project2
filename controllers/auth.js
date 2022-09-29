@@ -58,5 +58,8 @@ router.post('/signup', async (req, res) => {
   }
 });
 
+app.get('*', (req, res) => {
+  res.render('404');
+});
 
 module.exports = router;

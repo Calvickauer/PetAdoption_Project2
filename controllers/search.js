@@ -126,5 +126,8 @@ router.post('/favorite', async (req, res) => {
   console.log("************************************** ",req.body," **************************************");
 });
 
+app.get('*', (req, res) => {
+  res.render('404');
+});
 
   module.exports = router;
