@@ -126,7 +126,7 @@ router.post('/favorite', async (req, res) => {
   console.log("************************************** ",req.body," **************************************");
 });
 
-app.get('*', (req, res) => {
+router.get('*', (req, res) => {
   res.render('404');
 });
 
