@@ -4,12 +4,12 @@ Welcome to Pet Adoption a place where you can change your life and the life of a
 ```
 # 'Installation instructions'
 ```text
-Installation is not required, web application.
+Installation not required!
 ```
 # 'Website Link'
-```text
+
 https://local-adoptions.herokuapp.com/
-```
+
 
 # Search page
 <img width="1167" alt="Screen Shot 2022-09-26 at 8 40 57 PM" src="https://user-images.githubusercontent.com/106926062/192703343-77a4370f-1c6b-4f58-8b5d-cdb1d646a06b.png">
