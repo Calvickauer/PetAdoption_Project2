@@ -29,6 +29,22 @@ https://local-adoptions.herokuapp.com/
 <img width="1217" alt="Screen Shot 2022-09-26 at 8 43 22 PM" src="https://user-images.githubusercontent.com/106926062/192663392-9aa5b029-3f06-4a82-89bd-fb03383c4c54.png">
 
 
+# 'Code Snippets'
+<img width="1152" alt="Screen Shot 2022-10-01 at 11 33 00 AM" src="https://user-images.githubusercontent.com/106926062/193423447-94397386-ca1f-41e6-afd0-454769346ebc.png">
+<img width="864" alt="Screen Shot 2022-10-01 at 11 33 20 AM" src="https://user-images.githubusercontent.com/106926062/193423448-7db5c3d2-0471-4a68-ba29-367171207eb9.png">
+<img width="1106" alt="Screen Shot 2022-10-01 at 11 33 58 AM" src="https://user-images.githubusercontent.com/106926062/193423450-7e13e7c9-9d24-40b2-84df-23df49d04c5d.png">
+<img width="865" alt="Screen Shot 2022-10-01 at 11 34 33 AM" src="https://user-images.githubusercontent.com/106926062/193423452-c771cd0a-d656-491b-8247-32a01d9447d8.png">
+<img width="805" alt="Screen Shot 2022-10-01 at 11 34 46 AM" src="https://user-images.githubusercontent.com/106926062/193423454-b3d63822-aaa4-48ce-978f-57403130ecd2.png">
+<img width="574" alt="Screen Shot 2022-10-01 at 11 31 06 AM" src="https://user-images.githubusercontent.com/106926062/193423455-7d5fcf31-ec73-41b8-a42f-9cef32c1e44b.png">
+<img width="596" alt="Screen Shot 2022-10-01 at 11 31 19 AM" src="https://user-images.githubusercontent.com/106926062/193423456-8ba1800d-2628-4cf2-8e77-2f4b5881325c.png">
+<img width="589" alt="Screen Shot 2022-10-01 at 11 31 31 AM" src="https://user-images.githubusercontent.com/106926062/193423458-f23822a3-2a81-4313-8fa2-084ddbabf407.png">
+<img width="589" alt="Screen Shot 2022-10-01 at 11 31 48 AM" src="https://user-images.githubusercontent.com/106926062/193423459-ff558275-37e8-499d-8131-1e68274a01f2.png">
+<img width="589" alt="Screen Shot 2022-10-01 at 11 31 59 AM" src="https://user-images.githubusercontent.com/106926062/193423460-907ab535-29ff-4910-a1e9-1276925f3452.png">
+<img width="590" alt="Screen Shot 2022-10-01 at 11 32 10 AM" src="https://user-images.githubusercontent.com/106926062/193423462-3bb06014-f47b-4add-b214-d93074d09c4c.png">
+<img width="1314" alt="Screen Shot 2022-10-01 at 11 32 43 AM" src="https://user-images.githubusercontent.com/106926062/193423464-4991e60a-c5ea-4b4e-9163-49d790bdd2f5.png">
+
+
+
 ## Express Authentication
 
 Express authentication template using Passport + Flash messages + custom middleware
