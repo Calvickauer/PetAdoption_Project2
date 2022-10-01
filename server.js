@@ -61,10 +61,10 @@ app.put('/profile/:id', isLoggedIn, async (req, res) => {
     console.log('TTTTTTTTTTTTTTTTTT put it in TTTTTTTTTTTTTTTTTTT');
     console.log(usersUpdated, "users updated");
     console.log('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW');
-  
+    
     // redirect back to profile page
     res.redirect('/profile');
-
+    
   } catch (error) {
     console.log(error, "  MY PUT ERROR!!!")
     console.log('***************************************************************');
@@ -84,12 +84,11 @@ app.get('/profile', isLoggedIn, (req, res) => {
 // access to all of our auth routes  GET /auth/login  GET /auth/signup POST routes as well
 app.use('/auth', require('./controllers/auth'));
 app.use('/search', require('./controllers/search'));
-app.use((req, res) => {
-  res.status(404).render('main/404');
-})
+
 app.get('*', (req, res) => {
   res.render('404');
 });
+
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
   console.log(`🎧 You're listening to the smooth sounds of port ${PORT} 🎧`);
