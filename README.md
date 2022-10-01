@@ -9,7 +9,7 @@ After creating a profile you can search local or non-local animals at shelters v
 Installation not required!
 ```
 # 'Website Link'
-
+## Mobile Friendly!
 https://local-adoptions.herokuapp.com/
 
 ## API source:
