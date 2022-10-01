@@ -1,7 +1,8 @@
 # 'Pet Adoption'
 ```text
 Welcome to Pet Adoption a place where you can change your life and the life of an animal in need!
-After creating a profile you can search local or non-local animals at shelters via zipcode, add animals to your favorites, and even send adoption inquiries!
+After creating a profile you can search local or non-local animals at shelters via zipcode,
+ add animals to your favorites, and even send adoption inquiries!
 ```
 # 'Installation instructions'
 ```text
