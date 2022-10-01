@@ -6,7 +6,20 @@ After creating a profile you can search local or non-local animals at shelters v
 ```
 # 'Installation instructions'
 ```text
-Installation not required!
+
+git clone https://github.com/Calvickauer/PetAdoption_Project2.git 
+cd PetAdoption_Project2
+npm install
+touch .env
+Go to  https://www.petfinder.com/developers/ follow instruction to recieve and api key and secret session 
+add inside .env file: SECRET_SESSION = ********** / API_KEY =  ***************
+create a database
+npm install sequelize-cl
+npx sequelize-cli db:create PetAdoption
+migrate their database
+npx sequelize-cli db:migrate
+Start the server
+npm start
 ```
 # 'Website Link'
 ## Mobile Friendly!
