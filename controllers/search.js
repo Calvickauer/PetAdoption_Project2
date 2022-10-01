@@ -53,7 +53,7 @@ router.delete('/favorite/:FavId', isLoggedIn, async (req, res) => {
   }).then(deleted => {
     console.log('Destroyed')
     console.log(deleted);
-    res.redirect('404');
+    res.redirect('/search');
   })
 });
 
