@@ -11,8 +11,15 @@ Installation not required!
 
 https://local-adoptions.herokuapp.com/
 
-# 'Wireframe & Model example'
+## API source:
+ https://www.petfinder.com/
+
+# 'PseudoCode Structures'
+
+## WireFrame
 <img width="1477" alt="Screen Shot 2022-09-28 at 5 38 45 PM" src="https://user-images.githubusercontent.com/106926062/192912861-0d6d319a-0e3f-4d4c-a578-f96e99d5e4fd.png">
+
+## Models
 <img width="1033" alt="Screen Shot 2022-09-28 at 5 39 05 PM" src="https://user-images.githubusercontent.com/106926062/192912870-0194c2d9-2fd2-466b-b066-6df04133632a.png">
 
 
