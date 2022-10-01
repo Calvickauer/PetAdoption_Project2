@@ -2,13 +2,11 @@
 ```text
 Welcome to Pet Adoption a place where you can change your life and the life of an animal in need!
 ```
-
-
+# 'Installation instructions'
+Installation is not required, web application.
+# 'Website Link'
 https://local-adoptions.herokuapp.com/
-heroku  https://git.heroku.com/local-adoptions.git (fetch)
-heroku  https://git.heroku.com/local-adoptions.git (push)
-origin  https://github.com/Calvickauer/PetAdoption_Project2.git (fetch)
-origin  https://github.com/Calvickauer/PetAdoption_Project2.git (push)
+
 # Search page
 <img width="1167" alt="Screen Shot 2022-09-26 at 8 40 57 PM" src="https://user-images.githubusercontent.com/106926062/192703343-77a4370f-1c6b-4f58-8b5d-cdb1d646a06b.png">
 # Animal search cards
@@ -21,7 +19,6 @@ origin  https://github.com/Calvickauer/PetAdoption_Project2.git (push)
 # Wireframe & Model example
 <img width="1477" alt="Screen Shot 2022-09-28 at 5 38 45 PM" src="https://user-images.githubusercontent.com/106926062/192912861-0d6d319a-0e3f-4d4c-a578-f96e99d5e4fd.png">
 <img width="1033" alt="Screen Shot 2022-09-28 at 5 39 05 PM" src="https://user-images.githubusercontent.com/106926062/192912870-0194c2d9-2fd2-466b-b066-6df04133632a.png">
-
 
 
 
@@ -111,8 +108,8 @@ git commit -m "Install dependencies for project"
     "use_env_variable": "DATABASE_URL",
     "dialect": "postgres",
     "dialectOptions": {
-        "ssl": {
-          "require": true,
+      "ssl": {
+        "require": true,
           "rejectUnauthorized": false
         }
     }
@@ -208,8 +205,8 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
       validate: {
-       len: {
-        args: [1,99],
+        len: {
+          args: [1,99],
         msg: 'Name must be between 1 and 99 characters'
        }
       }
@@ -234,6 +231,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'user',
+    
   });
 
   return user; // add functions above 
@@ -734,3 +732,7 @@ npm start
 `3` Push final changes to Github.
 
 `4` Make this repo a **Template** on Github for future projects (i.e. Project 2) ✅
+heroku  https://git.heroku.com/local-adoptions.git (fetch)
+    heroku  https://git.heroku.com/local-adoptions.git (push)
+    origin  https://github.com/Calvickauer/PetAdoption_Project2.git (fetch)
+    origin  https://github.com/Calvickauer/PetAdoption_Project2.git (push)
