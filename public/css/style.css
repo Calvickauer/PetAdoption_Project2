@@ -132,7 +132,7 @@ img {
   outline: none;
   border: none;
   border-radius: 5px;
-  height: 40px;
+  max-height: 70px;
   max-width: 240px;
   padding-left: 10px;
   padding-right: 10px;
