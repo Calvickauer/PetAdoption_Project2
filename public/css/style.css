@@ -190,6 +190,7 @@ img {
   -webkit-box-shadow: 0px 0px 23px 0px rgba(255,255,255,1);
   -moz-box-shadow: 0px 0px 23px 0px rgba(255,255,255,1);
   box-shadow: 0px 0px 23px 0px rgba(255,255,255,1);
+  width: fit-content;
 }
 
 .login-body{
@@ -197,6 +198,7 @@ img {
   -webkit-box-shadow: 0px 0px 23px 0px rgba(255,255,255,1);
   -moz-box-shadow: 0px 0px 23px 0px rgba(255,255,255,1);
   box-shadow: 0px 0px 23px 0px rgba(255,255,255,1);
+  width: fit-content;
 }
 
 .results-body {
@@ -224,7 +226,11 @@ img {
 
 .profile-body{
   color: white;
-  background-color:royalblue
+  background-color:royalblue;
+}
+
+.profile-container {
+  width: fit-content;
 }
 
 .card {
