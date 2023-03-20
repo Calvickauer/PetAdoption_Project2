@@ -271,3 +271,9 @@ img {
   margin:auto;
   max-width: 400px;
 }
+
+.Contact__shelter{
+  border-radius: 20px;
+  border: 1px solid black;
+  
+}

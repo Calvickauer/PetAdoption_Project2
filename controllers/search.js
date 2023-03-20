@@ -9,7 +9,7 @@ const db = require('../models');
 const isLoggedIn = require('../middleware/isLoggedIn');
 
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
   let Favorites = await db.favorite.findAll();
   Favorites = Favorites.map(F => F.toJSON());
   console.log(Favorites);
@@ -53,7 +53,7 @@ router.delete('/favorite/:FavId', isLoggedIn, async (req, res) => {
   }).then(deleted => {
     console.log('Destroyed')
     console.log(deleted);
-    res.redirect('/search');
+    res.redirect('/');
   })
 });
 
