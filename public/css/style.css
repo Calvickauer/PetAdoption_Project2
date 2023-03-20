@@ -274,6 +274,41 @@ img {
 
 .Contact__shelter{
   border-radius: 20px;
-  border: 1px solid black;
-  
+  border: 3px solid rgb(255, 255, 255);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: blue;
+  color: white;
+}
+
+.More__info{
+  border-radius: 20px;
+  border: 3px solid rgb(255, 255, 255);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: rgb(14, 191, 123);
+  color: rgb(0, 0, 0);
+}
+
+.Add__favorite{
+  border-radius: 20px;
+  border: 3px solid rgb(255, 255, 255);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: rgb(255, 37, 103);
+  color: white;
+}
+
+.Pet__image{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size:cover;
+  border: 2px solid black;
 }
