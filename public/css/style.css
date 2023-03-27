@@ -361,3 +361,35 @@ img {
     margin-right: auto;
     border-radius: 20px;
   }
+
+  .results__grid{
+    margin-top: 20px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .each__result{
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: tan;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 40px;
+  }
+
+  .Result__header{
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin: auto;
+    border-radius: 12px;
+    padding-top: 5px;
+  }
+
+  .Animal__image{
+    margin: auto;
+  }
