@@ -296,7 +296,7 @@ img {
   color: rgb(0, 0, 0);
   max-width: 200px;
   max-height: 40px;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .Add__favorite{
