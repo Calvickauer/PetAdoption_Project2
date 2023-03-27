@@ -9,6 +9,7 @@ h1 {
   font-family: "Lucida Handwriting", cursive;
   color: rgb(255, 255, 255);
   background-color: rgba(23, 205, 17, 0.8);
+  border-radius: 20px;
 }
 
 h3 {
@@ -207,7 +208,8 @@ img {
 
 .results-title {
   margin: auto;
-   max-width: 300px;
+  max-width: 300px;
+  border-radius: 20px;
 }
 
 .fav-card-body{
@@ -346,4 +348,16 @@ img {
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 10px;
+  }
+
+  .nav__bar{
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .Profile__banner{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
   }
