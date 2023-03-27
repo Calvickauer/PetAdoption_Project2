@@ -403,6 +403,16 @@ img {
     width: 825px;
   }
 
+  .Animal__option{
+    width: 330px;
+    height: fit-content;
+    padding-top: 5x;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 26px;
+  }
+
   @media screen and (max-width: 1504px) {
     .results__grid{
       grid-template-columns: 1fr 1fr 1fr;
