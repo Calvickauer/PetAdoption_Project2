@@ -1,7 +1,11 @@
-<form method="POST" action="/profile/<%= currentUser.id %>/?_method=PUT">
-    <label>Name</label>
-    <input type="text" name="name" value="<%= currentUser.name %>">
-    <label>Email</label>
-    <input type="text" name="email" value="<%= currentUser.email %>">
+<form class="Edit__profile" method="POST" action="/profile/<%= currentUser.id %>/?_method=PUT">
+    <h2>Edit Your Profile</h2>
+    <br/>
+    <label class="Edit__label">Name</label>
+    <input class="Edit__name" type="text" name="name" value="<%= currentUser.name %>">
+    <br/>
+    <label class="Edit__label">Email</label>
+    <input class="Edit__email" type="text" name="email" value="<%= currentUser.email %>">
+    <br/>
     <input type="submit">
 </form>
