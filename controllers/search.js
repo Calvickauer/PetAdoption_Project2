@@ -47,15 +47,32 @@ router.post('/results', (req, res) => {
   })
 });
 
+// router.delete('/favorite/:FavId', isLoggedIn, async (req, res) => {
+//   db.favorite.destroy({
+//     where: {petId: req.params.FavId}
+//   }).then(deleted => {
+//     console.log('Destroyed')
+//     console.log(deleted);
+//     res.render('search/favorite');
+//   })
+// });
+
 router.delete('/favorite/:FavId', isLoggedIn, async (req, res) => {
-  db.favorite.destroy({
-    where: {petId: req.params.FavId}
-  }).then(deleted => {
-    console.log('Destroyed')
+  try {
+    const deleted = await db.favorite.destroy({
+      where: { petId: req.params.FavId }
+    });
+    console.log('Destroyed');
     console.log(deleted);
-    res.redirect('/');
-  })
+    const favorites = await db.favorite.findAll();
+    // render the favorite template with updated favorites list
+    res.render('search/favorite' , {Favorites: favorites.map(f => f.toJSON())});
+  } catch (err) {
+    console.log(err);
+    res.status(500).render('error');
+  }
 });
+
 
 
 router.post('/animal', (req, res) => {

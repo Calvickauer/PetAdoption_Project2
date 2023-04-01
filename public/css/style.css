@@ -212,10 +212,6 @@ img {
   border-radius: 20px;
 }
 
-.fav-card-body{
-  background-color: tan;
-}
-
 .results-card-header{
   color: white;
   background-color: grey;
@@ -297,6 +293,7 @@ img {
   max-width: 200px;
   max-height: 40px;
   overflow-x: hidden;
+  margin: 5px;
 }
 
 .Add__favorite{
@@ -369,6 +366,30 @@ img {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
+  }
+
+  .Favorites__each{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+  }
+
+  .Each__fav{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: grey;
+    margin-bottom: 10px;
+  }
+
+  .Fav__name{
+    color: white;
+  }
+
+  .Fav__id{
+    color: white;
   }
 
   .results__grid{
@@ -454,6 +475,11 @@ img {
 
   @media screen and (max-width: 1150px) {
     .results__grid{
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .Favorites__each{
+      display: grid;
       grid-template-columns: 1fr 1fr;
     }
   }
