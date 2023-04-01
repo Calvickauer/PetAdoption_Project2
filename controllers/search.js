@@ -114,20 +114,27 @@ router.post('/contact', (req, res) => {
   })
 
 router.post('/favorite', async (req, res) => {
-  console.log("Favorite Favorite Favorite Favorite Favorite Favorite. . . . - - - - ",req.body);
-  //create new favorite in db
-  const newFavoritePet = await db.favorite.create({
-    petId: parseInt(req.body.petID),
-    userId: parseInt(req.body.userID),
-  });
-  console.log(newFavoritePet.toJSON());
-  // redirection time
-  res.redirect('/search');
-  console.log("************************************** ",req.body," **************************************");
+  try {
+    console.log("@@@@@@@@@@@#############$$$$$$$$$$$$$$$$$$$$$$%%%%%%%%%%%%%%%%%%%%%%%^^^^^^^^^^^^^^^^&&&&&&&&&&&&&&&Favorite Favorite Favorite Favorite Favorite Favorite. . . . - - - - ");
+    //create new favorite in db
+    await db.favorite.create({
+      petId: parseInt(req.body.petID),
+      userId: parseInt(req.body.userID),
+    });
+    // fetch updated list of favorites from the database
+    const favorites = await db.favorite.findAll();
+    // render the favorite template with updated favorites list
+    res.render('search/favorite' , {Favorites: favorites.map(f => f.toJSON())});
+  } catch (err) {
+    console.log(err);
+    res.status(500).render('error');
+  }
 });
 
-router.get('*', (req, res) => {
-  res.render('404');
-});
+
+
+// router.get('*', (req, res) => {
+//   res.render('404');
+// });
 
   module.exports = router;

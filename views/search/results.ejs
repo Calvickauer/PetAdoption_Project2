@@ -68,7 +68,7 @@
                         <button name="animalId" type="submit" class="More__info" value=<%=animal.id%>>More info on <%= animal.name %> </button>
                     </form>
     
-                    <form action="/search/favorite" method="post" id="favorite">
+                    <form action="./favorite" method="post" id="favorite">
                         <input type="text" value="<%= animal.id %>" name="petID"  hidden>
                         <input type="text" value="<%= currentUser.id %>" name="userID"  hidden>
                         <button type="submit" class="Add__favorite">Add to Favorites</button>
