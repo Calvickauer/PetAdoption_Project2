@@ -399,6 +399,13 @@ img {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .results__gridNo{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+  }
+
   .each__result{
     width: fit-content;
     height: 600px;
@@ -467,6 +474,23 @@ img {
     text-decoration: underline;
   }
 
+  .No__userResults{
+    text-align: center;
+    width: fit-content;
+    padding: 20px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .Results__no{
+    width: fit-content;
+    background-color: blanchedalmond;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 10px;
+  }
+
   @media screen and (max-width: 1504px) {
     .results__grid{
       grid-template-columns: 1fr 1fr 1fr;
@@ -475,6 +499,10 @@ img {
 
   @media screen and (max-width: 1150px) {
     .results__grid{
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .results__gridNo{
       grid-template-columns: 1fr 1fr;
     }
 
