@@ -317,6 +317,7 @@ img {
   -webkit-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
 box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
+margin-bottom: 10px;
 }
 
 .Home__btn{
@@ -412,7 +413,7 @@ box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
 
   .each__result{
     width: fit-content;
-    height: 600px;
+    height: 610px;
     margin-left: auto;
     margin-right: auto;
     background-color: tan;
@@ -420,6 +421,7 @@ box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
     border-radius: 10px;
     border: 1px solid black;
     margin-bottom: 40px;
+    padding-bottom: 5px;
   }
 
   .Result__header{
