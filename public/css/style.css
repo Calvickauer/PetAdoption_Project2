@@ -534,6 +534,10 @@ margin-bottom: 10px;
       grid-template-columns: 1fr;
     }
 
+    .results__gridNo{
+      grid-template-columns: 1fr;
+    }
+
     .Results__main-img{
       width: 370px;
     }
