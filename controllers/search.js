@@ -73,6 +73,17 @@ router.delete('/favorite/:FavId', isLoggedIn, async (req, res) => {
   }
 });
 
+router.get('/favorites', async (req, res) => {
+  try {
+    const favorites = await db.favorite.findAll();
+    res.render('search/favorite', { Favorites: favorites.map(f => f.toJSON()) });
+  } catch (err) {
+    console.log(err);
+    res.status(500).render('error');
+  }
+});
+
+
 
 
 router.post('/animal', (req, res) => {
