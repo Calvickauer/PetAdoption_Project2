@@ -60,7 +60,7 @@ img {
 }
 
 .head {
-  background-color: rgb(228, 28, 254);
+  background-color: rgb(226, 30, 251);
   border-radius: 5px;
   margin-top: -40px;
   -webkit-box-shadow: 14px 10px 38px -10px rgba(224,11,224,1);
@@ -303,7 +303,7 @@ img {
 .Add__favorite{
   border-radius: 20px;
   border: 3px solid rgb(255, 255, 255);
-  padding-top: 3px;
+  padding-top: 4px;
   padding-bottom: 3px;
   padding-left: 7px;
   padding-right: 7px;
