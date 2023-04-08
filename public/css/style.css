@@ -20,8 +20,12 @@ body {
   background-image: url(/assets/images/wallpaper.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size:auto;
+  background-size: cover;
   text-align: center;
+}
+
+.created-by{
+  color: rgb(255, 255, 255);
 }
 
 img {
