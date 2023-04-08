@@ -9,6 +9,8 @@ const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 var methodOverride = require('method-override');
 const db = require('./models');
+const favicon = require('serve-favicon');
+
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const API_KEY = process.env.API_KEY;
@@ -17,6 +19,7 @@ console.log('yooooooooooo..... >>> ');
 
 app.set('view engine', 'ejs');
 
+app.use(favicon(__dirname + '/favicon.ico'));
 app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
