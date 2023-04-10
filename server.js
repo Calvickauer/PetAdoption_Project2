@@ -99,8 +99,3 @@ const server = app.listen(PORT, () => {
 
 
 module.exports = server;
-
-
-// NOTES
-
-// understand Bootstrap, GET / POST practice/understanding, FORMS, EJS, SEEDING/MIGRATING, GRABBING AND USING MODEL DATA, module.exports, 
