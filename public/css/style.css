@@ -448,6 +448,11 @@ margin-bottom: 10px;
     padding-bottom: 10px;
   }
 
+  .each__result :hover{
+    background-color: rgba(50, 149, 255, 0.268);
+    border-radius: 20px;
+  }
+
   .Result__header{
     background-color: black;
     color: white;
