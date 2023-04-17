@@ -294,8 +294,8 @@ img {
   padding-right: 7px;
   background-color: rgb(14, 191, 123);
   color: rgb(0, 0, 0);
-  max-width: 200px;
-  max-height: 40px;
+  max-width: 250px;
+  max-height: 35px;
   overflow-x: hidden;
   margin: 5px;
 }
@@ -319,9 +319,9 @@ img {
   border: 2px solid black;
   margin-top: 10px;
   -webkit-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
-margin-bottom: 10px;
+  -moz-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
+  margin-bottom: 10px;
 }
 
 .Home__btn{
@@ -448,10 +448,13 @@ margin-bottom: 10px;
     padding-bottom: 10px;
   }
 
-  .each__result :hover{
+  .each__result:hover{
     background-color: rgba(50, 149, 255, 0.268);
-    border-radius: 20px;
   }
+
+  .each__result:hover .Pet__image {
+    border-radius: 20px;
+    }
 
   .Result__header{
     background-color: black;
