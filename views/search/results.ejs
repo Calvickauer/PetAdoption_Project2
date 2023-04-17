@@ -20,7 +20,7 @@
                             <ul class="list-group">
                                 <li class="list-group-item">Status: <%= animal.status %> </li>
                             </ul>
-                            <a href="/auth/signup" class="btn btn-warning btn-block mt-2 m-3 ">For more info on <%=animal.name %> sign up here!! </a>
+                            <a href="/auth/signup" class="more__infoNo">For more info on <%=animal.name %> sign up here!! </a>
                         </div>
                     </div>
                 </div>
@@ -112,14 +112,13 @@
                                 <% console.log('no photos'); %> 
                             </div>
                             <div class="container">
-                                <form method="POST" action="./animal" id="animalId" class="m-2">
-                                    <button name="animalId" type="submit" class="More__info" value="<%=animal.id%>">More info on <%= animal.name %> </button>
-                                </form>
-                
                                 <form action="./favorite" method="post" id="favorite">
                                     <input type="text" value="<%= animal.id %>" name="petID"  hidden>
                                     <input type="text" value="<%= currentUser.id %>" name="userID"  hidden>
                                     <button type="submit" class="Add__favorite">Add to Favorites</button>
+                                </form>
+                                <form method="POST" action="./animal" id="animalId" class="m-2">
+                                    <button name="animalId" type="submit" class="More__info" value="<%=animal.id%>">More info on <%= animal.name %> </button>
                                 </form>
                             </div>
                         </div>
