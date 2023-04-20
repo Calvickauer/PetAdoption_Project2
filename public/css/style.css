@@ -467,7 +467,7 @@ img {
   }
 
   .each__result:hover{
-    background-color: rgba(50, 149, 255, 0.268);
+    background-color: rgba(50, 149, 255, 0.465);
   }
 
   .each__result:hover .Pet__image {
@@ -546,6 +546,11 @@ img {
   }
 
   .Results__no:hover .Results__text{
+    color: white;
+    text-decoration: underline;
+  }
+
+  .each__result:hover .Results__text{
     color: white;
     text-decoration: underline;
   }
