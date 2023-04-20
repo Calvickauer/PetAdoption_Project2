@@ -15,9 +15,9 @@
     <%- include('partials/alerts') %>
 <div class="nav__bar">
     <% if (!currentUser) {%>
-      <a href="/" class="Home__btn">Home</a>
-      <a href="/auth/login" class="Login__btn">Login</a>
-      <a href="/auth/signup" class="Signup__btn">Signup</a>
+      <a href="/" class="Home__btn navBtn">Home</a>
+      <a href="/auth/login" class="Login__btn navBtn">Login</a>
+      <a href="/auth/signup" class="Signup__btn navBtn">Signup</a>
      <% } else { %>
       <a href="/" class="Home__btn navBtn">Home</a>
       <a href="/profile" class="Login__btn navBtn">Profile</a>
