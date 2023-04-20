@@ -545,6 +545,23 @@ img {
     padding-top: 10px;
   }
 
+  .Results__no:hover .Results__text{
+    color: white;
+    text-decoration: underline;
+  }
+
+  .Results__no:hover .Pet__image{
+    border-radius: 20px;
+  }
+
+  .Results__no:hover{
+    background-color: rgb(86, 176, 255);
+  }
+
+  .Results__text{
+    color: gray;
+  }
+
   .aboutUs{
     background-color: white;
     width: 30%;
