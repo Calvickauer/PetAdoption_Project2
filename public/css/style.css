@@ -578,15 +578,29 @@ img {
   .Pet__profileGridContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: fit-content;
+    width: 80vw;
     height: fit-content;
-    background-color: black;
-    margin: auto;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 12px;
   }
 
-  .Pet__grid{
+  .Pet__grid1{
     background-color: white;
     margin: auto;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 25px;
+  }
+  .Pet__grid2{
+    background-color: rgb(255, 255, 135);
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid black;
   }
 
   @media screen and (max-width: 1504px) {
