@@ -260,9 +260,6 @@ img {
   background-color: rgb(207, 207, 207);
 }
 
-.animal-card-header{
-  background-color: rgb(0, 129, 26, 0.7);
-}
 
 .FourOhFour{
   background-color: red;
@@ -576,6 +573,20 @@ img {
     border-radius: 10px;
     border: 1px solid black;
     margin-top: 30px;
+  }
+
+  .Pet__profileGridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    height: fit-content;
+    background-color: black;
+    margin: auto;
+  }
+
+  .Pet__grid{
+    background-color: white;
+    margin: auto;
   }
 
   @media screen and (max-width: 1504px) {
