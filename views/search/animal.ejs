@@ -25,9 +25,14 @@
                         <p><%= animal.contact.email %> </p>
                         <p><%= animal.contact.phone %> </p>
                         <p><%= animal.contact.address[0] %> </p>
+                    </div>
+                    <div class="Pet__grid3">
+                        <h4>Contact Shelter About <%= animal.name %>! -></h4>
+                    </div>
+                    <div class="Pet__grid4">
                         <form method="POST" action="./contact" id="animalId">
                             <input value=<%=animal.contact.email %> type="text" hidden>
-                            <button name="animalId" type="submit" class="Contact__shelter" value=<%=animal.id%>>Contact shelter about <%= animal.name %> </button>
+                            <button name="animalId" type="submit" class="Contact__shelter" value=<%=animal.id%>>Contact Shelter</button>
                         </form>
                     </div>
                 </div>
